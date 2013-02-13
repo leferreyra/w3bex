@@ -1,0 +1,79 @@
+
+// Definimos algunas constantes
+@fondo: #4d4d4d;
+@fondo_img: url('../img/background.png');
+@fondo_header: #1a1a1a;
+@fondo_subheader: #333;
+@verde: #aad400;
+@fuente_color: #999;
+
+// Importar fuentes para el menu y titulos
+@font-face {
+	font-family: BebasNeue;
+	src: url('../fonts/BebasNeue-webfont.eot'), /* IE9 */
+		 url('../fonts/BebasNeue-webfont.ttf'),
+		 url('../fonts/BebasNeue-webfont.woff'); 
+}
+
+// CSS Base principal
+body {
+	background-color: @fondo;
+	background-image: url('../img/background.png');
+	font-size: 14px;
+	a {
+		color: @verde;
+		text-decoration: none;
+		transition: color 0.3s ease-in-out;
+	}
+	header {
+		width: 100%;
+		padding: 0.8em 0em;
+		background-color: @fondo_header;
+		background-image: url('../img/header_background.png');
+		border-bottom: 1px solid black;
+		nav {
+			width: 700px;
+			float: right;
+			a {
+				color: @fuente_color;
+				&:hover {
+					color: @verde;
+				}
+			}
+			ul {
+				margin: 0px;
+				float: right;
+				font-family: BebasNeue, Arial;
+				font-size: 28px;
+				list-style: none;
+				padding: 0px;
+				line-height: 33px;
+				position: relative;
+				top: 3px;
+				li {
+					display: inline;
+					text-transform: uppercase;
+					margin-left: 15px;
+				}
+			}
+		}
+	}
+	.subheader {
+		height: 2em;
+		background-color: darken(@fondo_subheader, 1);
+		border-top: 1px solid @fondo;
+	}
+	.body {
+		min-height: 800px;
+	}
+	footer {
+		height: 10em;
+		background-color: rgba(0,0,0, 0.3);
+	}
+}
+
+// .continer mantiene centrado el contenido en 900px
+.container {
+	width: 900px;
+	margin: 0px auto;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+
+        <!-- bloque para definir el titulo de la pagina -->
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
+
+        <!-- Importamos nuestro css (compilar w3bex.less) -->
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/w3bex.css">
+
+        <!-- Agregamos el icono de favoritos -->
+        <link rel="shortcut icon" href="{{ STATIC_URL }}img/fav.png" type="ico/png">
+
+        <script src="{{ STATIC_URL }}js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="{{ STATIC_URL }}js/vendor/prefixfree.min.js"></script>
+
+        <!-- en caso de que haga falta incluir algo -->
+        {% block header %}{% endblock %}
+
+    </head>
+    <body>
+
+        <!-- Bloque principal de html -->
+        {% block main %}{% endblock %}
+
+        <!-- Importar cosas necesarias -->
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="{{ STATIC_URL }}js/plugins.js"></script>
+        <script src="{{ STATIC_URL }}js/main.js"></script>
+
+    </body>
+</html>
