@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
-from website.models import Post
+from blog.models import Post
 
 
 # Vista provisoria del index
