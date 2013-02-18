@@ -10,12 +10,14 @@
 		<div class="container">
 			<img src="{{ STATIC_URL }}img/w3bex-logo.png" alt="w3bex" id='top-logo'>
 			<nav>
-				<ul>
-					<a href='#'><li>Blog</li></a>
-					<a href='#'><li>Servicios</li></a>
-					<a href='#'><li>Portfolio</li></a>
-					<a href='#'><li>Acerca</li></a>
-				</ul>
+				{% block menu %}
+					<ul>
+						<a href='#'><li>Blog</li></a>
+						<a href='#'><li>Servicios</li></a>
+						<a href='#'><li>Portfolio</li></a>
+						<a href='#'><li>Acerca</li></a>
+					</ul>
+				{% endblock %}
 			</nav>
 		</div>
 	</header>
@@ -24,9 +26,11 @@
 		<!-- Solo de adorno, probablemente, contenga publicidad depspues -->
 	</div>
 
-	<div class="body container">
+	{% block body %}
+		<div class="body container">
 
-	</div>
+		</div>
+	{% endblock %}
 
 	<footer>
 		

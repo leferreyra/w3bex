@@ -32,8 +32,11 @@ body {
 		background-image: url('../img/header_background.png');
 		border-bottom: 1px solid black;
 		nav {
-			width: 700px;
+			width: 500px;
 			float: right;
+			.active {
+				color: @verde;
+			}
 			a {
 				color: @fuente_color;
 				&:hover {
@@ -56,6 +59,9 @@ body {
 					margin-left: 15px;
 				}
 			}
+			.top-logo {
+				float: left;
+			}
 		}
 	}
 	.subheader {
@@ -64,11 +70,13 @@ body {
 		border-top: 1px solid @fondo;
 	}
 	.body {
-		min-height: 800px;
+		// min-height: 800px;
+		overflow: auto;
 	}
 	footer {
 		height: 10em;
 		background-color: rgba(0,0,0, 0.3);
+		margin-top: 20px;
 	}
 }
 
@@ -76,4 +84,79 @@ body {
 .container {
 	width: 900px;
 	margin: 0px auto;
+}
+
+// CSS post template
+.post {
+	width: 570px;
+	float: left;
+	color: @fuente_color;
+	a {
+		color: @verde;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	h2,h3 {
+		color: @verde;
+	}
+	h1 {
+		color: #ccc;
+		font-family: BebasNeue, Arial;
+		font-weight: normal;
+		font-size: 34px;
+		line-height: 28px;
+		margin-bottom: 0px;
+	}
+	h2 {
+		font-weight: normal;
+		margin: 0em;
+		font-size: 20px;
+	}
+	.author-time {
+		margin-top: 5px;
+		color: gray;
+		margin-bottom: 1em;
+	}
+	p {
+		font-family: Arial, Verdana;
+		color: #ccc;
+		margin: 1em 0em;
+		margin-top: 0.3em;
+		line-height: 1.5em;
+	}
+	.tags {
+		color: gray;
+		font-weight: bold;
+		span {
+			font-weight: normal;
+			&:after {
+				content: ",";
+			}
+			&:last-child:after {
+				content: ".";
+			}
+		}
+	}
+}
+
+.sidebar {
+	height: 600px;
+	width: 300px;
+	background-color: @fondo;
+	float: right;
+	h3 {
+		color: #1a1a1a;
+		font-size: 22px;
+		font-family: BebasNeue, Arial;
+		text-transform: uppercase;
+		font-weight: normal;
+		padding: 0px;
+		margin: 15px 20px;
+	}
+}
+
+.comments {
+	width: 570px;
+	float: left;
 }

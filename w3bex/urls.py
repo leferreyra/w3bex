@@ -17,4 +17,5 @@ urlpatterns = patterns('',
 
     # w3bex urls
     url(r'^$', 'website.views.index'),
+    url(r'^blog/(\S+)/$', 'website.views.post'),
 )
