@@ -1,4 +1,5 @@
 from django.conf.urls.defaults import patterns, include, url
+from w3bex import settings
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -16,6 +17,15 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     # w3bex urls
-    url(r'^$', 'website.views.index'),
-    url(r'^blog/(\S+)/$', 'website.views.post'),
+    url(r'^$', 'blog.views.index'),
+    url(r'^blog/$', 'blog.views.post_list'),
+    url(r'^blog/(\S+)/$', 'blog.views.post'),
 )
+
+
+# servir archivos estaticos en servidor de desarrollo
+if settings.DEBUG:
+    urlpatterns += patterns('', 
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+	    'document_root': settings.MEDIA_ROOT,}),
+        )

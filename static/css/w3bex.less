@@ -23,7 +23,6 @@ body {
 	a {
 		color: @verde;
 		text-decoration: none;
-		transition: color 0.3s ease-in-out;
 	}
 	header {
 		width: 100%;
@@ -38,6 +37,7 @@ body {
 				color: @verde;
 			}
 			a {
+				transition: color 0.3s ease-in-out;
 				color: @fuente_color;
 				&:hover {
 					color: @verde;
@@ -125,6 +125,10 @@ body {
 		margin-top: 0.3em;
 		line-height: 1.5em;
 	}
+	img { 
+		max-width: 100%;
+		text-align: center;
+	}
 	.tags {
 		color: gray;
 		font-weight: bold;
@@ -140,23 +144,72 @@ body {
 	}
 }
 
+.posts {
+	article {
+		margin-bottom: 20px;
+		h1 a, h1 a:hover {
+			color: @fuente_color;
+			text-decoration: none;
+		}
+		img {
+			margin-bottom: 10px;
+		}
+		.seguir-leyendo {
+			font-weight: bold;
+			transtition: none;
+
+			&:hover	{
+				background-color: @verde;
+				color: #333;
+			}
+		}
+	}
+}
+
 .sidebar {
-	height: 600px;
 	width: 300px;
-	background-color: @fondo;
 	float: right;
 	h3 {
-		color: #1a1a1a;
+		color: @verde;
 		font-size: 22px;
 		font-family: BebasNeue, Arial;
 		text-transform: uppercase;
 		font-weight: normal;
-		padding: 0px;
-		margin: 15px 20px;
+		padding: 15px 20px;
+		padding-bottom: 10px;
+		margin: 0px;
+	}
+	.side-content {
+		background-color: @fondo;
+		padding-bottom: 20px;
+		min-height: 600px;
+	}
+	.top-post {
+		margin-bottom: 1px;
+		background-size: cover;
+		background-position: center center;
+		.dark-mask{
+			padding: 10px;
+			color: white;
+			font-size: 16px;
+			line-height: 1em;
+			background-color: rgba(0,0,0, 0.8);
+			transition: background-color 0.3s ease-in-out;
+			&:hover{
+				background-color: rgba(0,0,0, 0.5);
+			}
+		}
+	}
+	#side-tail {
+		background-image: url("../img/post-sidebar-bottom.png");
+		width: 300px;
+		height: 47px;
+		background-repeat: no-repeat;
 	}
 }
 
 .comments {
+	margin-top: 20px;
 	width: 570px;
 	float: left;
 }

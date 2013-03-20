@@ -20,7 +20,8 @@ class Post(models.Model):
 	Representa cada articulo escrito en el blog
 	"""
 
-	title = models.CharField(max_length=150)
+	title = models.CharField(max_length=100)
+	lead = models.TextField(blank=True)
 	author = models.ForeignKey(User)
 	date = models.DateTimeField(auto_now_add=True)
 	tags = models.ManyToManyField(Tag)
@@ -41,8 +42,29 @@ class Post(models.Model):
 			self.slug = slugify(self.title)
 
 		super(Post, self).save(args, kwargs)
+	
+	def cover(self):
+
+		# si el post tiene imagenes, devuelve la primera
+		if len(self.image_set.all()) != 0:
+			return self.image_set.all()[0]
+		else:
+			return None
 
 
 	def __unicode__(self):
 
 		return self.title
+
+
+class Image(models.Model):
+	"""
+	Cada imagen en un post, es representada por este modelo. Se da 
+	por defecto que la primer imagen de cada post, es considerada
+	su 'Portada'
+	"""
+
+	image = models.ImageField(upload_to="post_images")
+	name = models.CharField(max_length=60)
+	post = models.ForeignKey(Post)
+
