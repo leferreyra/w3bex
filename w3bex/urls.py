@@ -20,6 +20,10 @@ urlpatterns = patterns('',
     url(r'^$', 'blog.views.index'),
     url(r'^blog/$', 'blog.views.post_list'),
     url(r'^blog/(\S+)/$', 'blog.views.post'),
+    url(r'^tag/(\S+)/$', 'blog.views.post_by_tag'),
+
+    url(r'^acerca/$', 'website.views.static_view', {'page':'about.html'}),
+    url(r'^servicios/$', 'website.views.static_view', {'page':'services.html'}),
 )
 
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template import RequestContext
-from blog.models import Post
+from blog.models import Post, Tag
 
 
 # Vista provisoria del index
@@ -35,3 +35,19 @@ def post_list(request):
 			"top_posts":top_posts 
 			},
 		context_instance=RequestContext(request));
+
+
+def post_by_tag(request, tagname):
+    
+	top_posts = Post.objects.all()
+
+	tag = get_object_or_404(Tag, tag_name=tagname)
+	posts = tag.post_set.all()
+
+	return render_to_response(
+		'post-list.html', {
+			"posts": posts,
+			"top_posts":top_posts 
+			},
+		context_instance=RequestContext(request));
+

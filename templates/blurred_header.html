@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Desarrollo Web | w3bex
+{% endblock %}
+
+{% block main %}
+
+	<header>
+		<div class="container">
+			<img src="{{ STATIC_URL }}img/w3bex-logo.png" alt="w3bex" id='top-logo'>
+			<nav>
+				{% block menu %}
+					<ul>
+						<a href='/blog'><li>Blog</li></a>
+						<a href='/servicios'><li>Servicios</li></a>
+						<a href='/portfolio'><li>Portfolio</li></a>
+						<a href='/acerca'><li>Acerca</li></a>
+					</ul>
+				{% endblock %}
+			</nav>
+		</div>
+	</header>
+
+	<div class='subheader'>
+		<!-- Solo de adorno, probablemente, contenga publicidad depspues -->
+	</div>
+
+	{% block body %}
+		<div class='header-blur'>
+			{% block page-title %} <h1>Aplicaciones Web</h1> {% endblock %}
+			{% block page-subtitle %}<p>Desarrollamos todo tipo de aplicaciones web, 
+			desde sitios corporativos puramente estaticos, 
+			hasta grandes plataformas de usuarios. {% endblock %}</p>
+		</div>
+		<div class='container'>
+			<div class='transparent-line'></div>
+			<div class='content-box'>
+
+			{% block page-content %}
+			{% endblock %}
+			
+			</div>
+		</div>
+	{% endblock %}
+
+	<footer>
+		
+	</footer>
+
+{% endblock %}
