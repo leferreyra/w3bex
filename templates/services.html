@@ -1,1 +1,25 @@
 {% extends "blurred_header.html" %}
+
+
+{% block menu %}
+	<ul>
+		<a href='/blog'><li>Blog</li></a>
+		<a href='/servicios' class='active'><li>Servicios</li></a>
+		<a href='/portfolio'><li>Portfolio</li></a>
+		<a href='/acerca'><li>Acerca</li></a>
+	</ul>
+{% endblock %}
+
+{% block blurred-background-image %}{{ STATIC_URL }}img/blurred_backgrounds/services.jpg{% endblock %}
+
+{% block page-title %} Aplicaciones Web {% endblock %}
+
+{% block page-subtitle %}
+	Desarrollamos todo tipo de aplicaciones web, 
+	desde sitios corporativos puramente estaticos, 
+	hasta grandes plataformas de usuarios. 
+{% endblock %}
+
+{% block page-content %}
+
+{% endblock %}

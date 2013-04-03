@@ -1,0 +1,23 @@
+{% extends "blurred_header.html" %}
+
+
+{% block menu %}
+	<ul>
+		<a href='/blog'><li>Blog</li></a>
+		<a href='/servicios'><li>Servicios</li></a>
+		<a href='/portfolio'><li>Portfolio</li></a>
+		<a href='/acerca' class='active'><li>Acerca</li></a>
+	</ul>
+{% endblock %}
+
+{% block blurred-background-image %}{{ STATIC_URL }}img/blurred_backgrounds/about.jpg{% endblock %}
+
+{% block page-title %} Acerca de W3BEX{% endblock %}
+
+{% block page-subtitle %}
+Lo mantenemos simple ;)
+{% endblock %}
+
+{% block page-content %}
+
+{% endblock %}

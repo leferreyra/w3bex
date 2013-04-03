@@ -27,9 +27,9 @@
 	</div>
 
 	{% block body %}
-		<div class='header-blur'>
-			{% block page-title %} <h1>Aplicaciones Web</h1> {% endblock %}
-			{% block page-subtitle %}<p>Desarrollamos todo tipo de aplicaciones web, 
+		<div class='header-blur' style='background-image: url("{% block blurred-background-image %}{% endblock %}");'>
+			<h1>{% block page-title %} Aplicaciones Web {% endblock %}</h1>
+			<p>{% block page-subtitle %}Desarrollamos todo tipo de aplicaciones web, 
 			desde sitios corporativos puramente estaticos, 
 			hasta grandes plataformas de usuarios. {% endblock %}</p>
 		</div>
