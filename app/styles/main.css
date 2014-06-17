@@ -1,7 +1,7 @@
 
 @font-face {
     font-family: "Open Sans Light";
-    src: url("../fonts/OpenSans-Light.ttf");
+    src: url("/fonts/OpenSans-Light.ttf");
 }
 
 body {
@@ -25,7 +25,7 @@ footer {
 .jumbo {
     padding: 100px 0;
     background-color: #f2f2f2;
-    background-image: url("../images/world-map.png");
+    background-image: url("/images/world-map.png");
     background-size: cover;
     background-position: center;
 }
@@ -94,15 +94,15 @@ footer {
 
 .contact .block.twitter {
     background-color: #5ea9dd;
-    background-image: url("../images/twitter-logo.png");
+    background-image: url("/images/twitter-logo.png");
 }
 
 .contact .block.fb {
     background-color: #3b579d;
-    background-image: url("../images/fb-logo.png");
+    background-image: url("/images/fb-logo.png");
 }
 
 .contact .block.email {
     background-color: #363b3c;
-    background-image: url("../images/email-logo.png");
+    background-image: url("/images/email-logo.png");
 }
