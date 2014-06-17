@@ -1,0 +1,108 @@
+
+@font-face {
+    font-family: "Open Sans Light";
+    src: url("../fonts/OpenSans-Light.ttf");
+}
+
+body {
+    font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+    border-top: 3px solid #0066ff;
+}
+
+a, a:hover {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+footer {
+    padding: 20px;
+    float: left;
+    background: black;
+    width: 100%;
+    color: gray;
+}
+
+.jumbo {
+    padding: 100px 0;
+    background-color: #f2f2f2;
+    background-image: url("../images/world-map.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.jumbo h1 {
+
+    font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+.jumbo p {
+    max-width: 700px;
+    padding: 20px 0;
+    margin: 0 auto;
+    font-size: 24px;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.contact {
+    overflow: visible;
+}
+
+.contact .block {
+    width: 33.3333333333%;
+    height: 150px;
+    float: left;
+    background-color: gray;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-position 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact .block:hover {
+    background-position: center 30%;
+}
+
+.contact .block:hover > span {
+    top: 45%;
+    opacity: 1;
+}
+
+.contact .block > span {
+    color: white;
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    top: 60%;
+    transition-delay: 0.1s;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    font-size: 24px;
+    opacity: 0;
+}
+
+.contact .block.twitter {
+    background-color: #5ea9dd;
+    background-image: url("../images/twitter-logo.png");
+}
+
+.contact .block.fb {
+    background-color: #3b579d;
+    background-image: url("../images/fb-logo.png");
+}
+
+.contact .block.email {
+    background-color: #363b3c;
+    background-image: url("../images/email-logo.png");
+}
