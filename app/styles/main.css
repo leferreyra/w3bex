@@ -14,6 +14,11 @@ a, a:hover {
     text-decoration: none;
 }
 
+h1, h2, h3 {
+    font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
 footer {
     padding: 20px;
     float: left;
@@ -21,6 +26,8 @@ footer {
     width: 100%;
     color: gray;
 }
+
+/* TOP SECTION, LOGO, INTRODUCTION */
 
 .jumbo {
     padding: 100px 0;
@@ -30,15 +37,9 @@ footer {
     background-position: center;
 }
 
-.jumbo h1 {
-
-    font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
-    text-align: center;
-}
-
 .jumbo p {
     max-width: 700px;
-    padding: 20px 0;
+    padding: 20px;
     margin: 0 auto;
     font-size: 24px;
     text-align: center;
@@ -49,6 +50,33 @@ footer {
     margin: 0 auto;
     margin-bottom: 50px;
 }
+
+
+/* SERVICES */
+
+.services {
+    background-color: #1a1a1a;
+    color: #b3b3b3;
+    padding: 50px 0 70px 0;
+}
+
+.services h2 {
+    color: #55d400;
+    font-size: 30px;
+    margin: 0 0 30px 0;
+}
+
+.services h3 {
+    margin: 20px 0 10px 0;
+    color: #cccccc;
+    text-align: left;
+}
+
+.services p {
+    font-size: 18px;
+}
+
+/* CONTACT, SOCIAL */
 
 .contact {
     overflow: visible;
